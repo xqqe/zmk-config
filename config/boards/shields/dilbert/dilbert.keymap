@@ -20,7 +20,7 @@
 
     ble_layer {
       bindings = <
-        &tog BLE        &kp KP_DIVIDE    &kp KP_MULTIPLY 
+        &tog BLE        &kp KP_DIVIDE   &kp KP_MULTIPLY 
         &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9    
         &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6         
       >;
