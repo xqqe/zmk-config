@@ -28,16 +28,18 @@
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-        &to 1       &macro_name     &kp P 
+        &to 1           &macro_name     &kp P 
         &kp A           &kp V           &kp K    
-        &kp Y           &kp H           &kp L
+        &kp Y           &kp H           &kp L  
+        &kp L      
      >;
 
     ble_layer {
       bindings = <
-        &to 0        &kp KP_DIVIDE   &kp KP_MULTIPLY 
+        &to 0           &kp KP_DIVIDE   &kp KP_MULTIPLY 
         &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9    
-        &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6         
+        &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6  
+        &kp L               
       >;
     };
 
