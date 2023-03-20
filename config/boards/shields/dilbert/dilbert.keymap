@@ -12,16 +12,16 @@
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-        &kp A &kp N8 &lt BLE N3
-        &out OUT_BLE &kp N5 &kp N6
-        &kp A &kp N2 &lt BLE N3
+        &tog BLE        &kp B           &kp P 
+        &kp A           &kp V           &kp K    
+        &kp Y           &kp H           &kp L
      >;
 
     ble_layer {
       bindings = <
-        &kp F &kp B &kp X
-        &out OUT_TOG &kp N3 &kp D
-        &none &none &none
+        &tog BLE       &kp KP_DIVIDE   &kp KP_MULTIPLY 
+        &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9    
+        &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6         
       >;
     };
 
