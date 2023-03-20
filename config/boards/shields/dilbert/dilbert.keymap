@@ -6,29 +6,29 @@
 #define DEFAULT 0
 / {
 
-  macros {
-        zed_em_kay: zed_em_kay {
-            label = "ZM_zed_em_kay";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp B &kp I &kp Z>
-                , <&macro_release &kp LSHFT>
-                ;
-        };
+  // macros {
+  //       zed_em_kay: zed_em_kay {
+  //           label = "ZM_zed_em_kay";
+  //           compatible = "zmk,behavior-macro";
+  //           #binding-cells = <0>;
+  //           bindings
+  //               = <&macro_press &kp LSHFT>
+  //               , <&macro_tap &kp B &kp I &kp Z>
+  //               , <&macro_release &kp LSHFT>
+  //               ;
+  //       };
 
-        zed_em_kay: selectALL {
-            label = "selectALL";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LEFT_CONTROL>
-                , <&macro_tap &kp A>
-                , <&macro_release &kp LEFT_CONTROL>
-                ;
-        };
-    };
+  //       zed_em_kay: selectALL {
+  //           label = "selectALL";
+  //           compatible = "zmk,behavior-macro";
+  //           #binding-cells = <0>;
+  //           bindings
+  //               = <&macro_press &kp LEFT_CONTROL>
+  //               , <&macro_tap &kp A>
+  //               , <&macro_release &kp LEFT_CONTROL>
+  //               ;
+  //       };
+  //   };
 
 
 
@@ -37,7 +37,7 @@
     default_layer {
       bindings = <
         &mt LEFT_CONTROL A &kp N8 &kp K_VOLUME_UP2
-        &selectALL &kp N5 &kp N6
+        &kp N4 &kp N5 &kp N6
         &kp N1 &kp N2 &lt BLE N3
      >;
 
