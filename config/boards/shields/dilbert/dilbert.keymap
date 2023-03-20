@@ -30,7 +30,7 @@
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-        &tog BLE        &mt z A         &mimi 
+        &tog BLE        &mt z A         &none 
         &kp A           &kp V           &kp K    
         &kp Y           &kp H           &kp L
      >;
