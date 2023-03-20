@@ -19,15 +19,6 @@
       <&xiao_d 1 GPIO_ACTIVE_HIGH >;
   };
 
-  kscan1: kscan_direct {
-		compatible = "zmk,kscan-gpio-direct";
-
-		label = "SW";
-
-		input-gpios
-			= <&gpio0 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>
-			;
-	};
 
   dilbert_encoder: dilbert_encoder {
         compatible = "alps,ec11";
