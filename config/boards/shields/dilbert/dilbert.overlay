@@ -5,15 +5,7 @@
     zmk,kscan = &default_kscan;
   };
 
-  kscan0: kscan {
-		compatible = "zmk,kscan-gpio-direct";
 
-		label = "KSCAN";
-
-		input-gpios
-			= <&gpio0 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>
-			;
-	};
 
   default_kscan: kscan {
     compatible = "zmk,kscan-gpio-matrix";
@@ -28,6 +20,16 @@
       <&xiao_d 2 GPIO_ACTIVE_HIGH >,
       <&xiao_d 1 GPIO_ACTIVE_HIGH >;
   };
+
+    kscan0: kscan {
+		compatible = "zmk,kscan-gpio-direct";
+
+		label = "SW";
+
+		input-gpios
+			= <&gpio0 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>
+			;
+	};
 
   dilbert_encoder: dilbert_encoder {
         compatible = "alps,ec11";
