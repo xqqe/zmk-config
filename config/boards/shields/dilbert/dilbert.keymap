@@ -33,6 +33,7 @@
         &kp F           &kp G           &bt BT_SEL 1 
         &mo BLE      
      >;
+     sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
 
     ble_layer {
@@ -42,12 +43,13 @@
         &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6  
         &none               
       >;
+      sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
 
 
 
-    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-    };
-
-
+    
   };
+
+
+};
