@@ -1,0 +1,4 @@
+if SHIELD_DILBERT
+    config ZMK_KEYBOARD_NAME
+        default "dilbert"
+endif
