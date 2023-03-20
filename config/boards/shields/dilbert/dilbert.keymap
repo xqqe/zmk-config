@@ -55,7 +55,7 @@
         &kp F           &kp G           &bt BT_SEL 1 
         &kp C_MUTE      
      >;
-     sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+     sensor-bindings = <&mwh SCROLL_UP SCROLL_DOWN>;
     };
 
     ble_layer {
