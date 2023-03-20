@@ -21,7 +21,7 @@
       <&xiao_d 1 GPIO_ACTIVE_HIGH >;
   };
 
-  kscan1: kscan {
+  kscan1: kscan_direct {
 		compatible = "zmk,kscan-gpio-direct";
 
 		label = "SW";
