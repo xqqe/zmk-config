@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
@@ -30,7 +31,7 @@
         &to 1           &ctrA           &bt BT_NXT 
         &kp C           &kp D           &bt BT_SEL 0   
         &kp F           &kp G           &bt BT_SEL 1 
-        &kp C_MUTE      
+        &kp K_MUTE      
      >;
      sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
