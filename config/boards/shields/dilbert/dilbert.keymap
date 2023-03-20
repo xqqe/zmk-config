@@ -17,6 +17,17 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
+
+        zed_em_kay: zed_em_kay {
+            label = "selectALL";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp B &kp I &kp Z>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
     };
 
 
@@ -25,7 +36,7 @@
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-        &zed_em_kay &kp N8 &kp N9
+        &ZM_zed_em_kay &kp N8 &kp K_VOLUME_UP2
         &kp N4 &kp N5 &kp N6
         &kp N1 &kp N2 &lt BLE N3
      >;
