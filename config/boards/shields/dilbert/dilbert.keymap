@@ -50,9 +50,9 @@
 
     default_layer {
       bindings = <
-        &to 1           &ctrA           &bt BT_NXT 
-        &kp C_AC_SCROLL_UP           &mwh SCROLL_UP           &bt BT_SEL 0   
-        &kp K_SCROLL_UP           &kp G           &bt BT_SEL 1 
+        &to 1           &ctrA             &bt BT_NXT 
+        &kp C_AC_VIEW_TOGGLE           &mwh SCROLL_UP    &bt BT_SEL 0   
+        &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS           &mwh SCROLL_DOWN  &bt BT_SEL 1 
         &kp C_MUTE      
      >;
      sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -61,7 +61,7 @@
     ble_layer {
       bindings = <
         &to 0           &kp KP_DIVIDE   &kp KP_MULTIPLY 
-        &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9    
+        &kp K_CALCULATOR    &kp NUMBER_8    &kp NUMBER_9    
         &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6  
         &kp C_MUTE               
       >;
