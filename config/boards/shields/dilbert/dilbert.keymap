@@ -23,9 +23,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp B &kp I &kp Z>
-                , <&macro_release &kp LSHFT>
+                = <&macro_press &kp LEFT_CONTROL>
+                , <&macro_tap &kp A>
+                , <&macro_release &kp LEFT_CONTROL>
                 ;
         };
     };
@@ -36,7 +36,7 @@
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-        &ZM_zed_em_kay &kp N8 &kp K_VOLUME_UP2
+        &mt LEFT_CONTROL A &kp N8 &kp K_VOLUME_UP2
         &kp N4 &kp N5 &kp N6
         &kp N1 &kp N2 &lt BLE N3
      >;
