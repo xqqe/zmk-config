@@ -11,20 +11,21 @@
 / {
 
 
-  macros {
-    macro_name: macro_name {
-        label = "my_macro";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-            = <&macro_press &kp LCTRL>,
-              <&macro_tap &kp A>,
-              <&macro_release &kp LCTRL>;
+    macros {
+      macro_name: macro_name {
+          label = "my_macro";
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings
+              = <&macro_press &kp LCTRL>,
+                <&macro_tap &kp A>,
+                <&macro_release &kp LCTRL>;
+      };
     };
-};
 
   keymap {
     compatible = "zmk,keymap";
+
     default_layer {
       bindings = <
         &to 1           &macro_name     &bt BT_NXT 
@@ -32,6 +33,7 @@
         &kp F           &kp G           &bt BT_SEL 1 
         &mo BLE      
      >;
+    };
 
     ble_layer {
       bindings = <
@@ -49,4 +51,3 @@
 
 
   };
-};
