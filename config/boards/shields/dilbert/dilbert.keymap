@@ -26,10 +26,13 @@
       >;
     };
 
-    SW = <&kp NUMBER_5>
-
-
-
+  direct {
+    compatible = "zmk,kscan-gpio-direct";
+    default_layer {
+      bindings = <&kp L>;
+    };
+  };
+  
     sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
 
