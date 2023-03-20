@@ -1,0 +1,4 @@
+if SHIELD_SKAI
+    config ZMK_KEYBOARD_NAME
+        default "SKAI Macroboard"
+endif
