@@ -5,6 +5,8 @@
     zmk,kscan = &default_kscan;
   };
 
+
+
   default_kscan: kscan {
     compatible = "zmk,kscan-gpio-matrix";
     label = "KSCAN";
@@ -19,9 +21,7 @@
       <&xiao_d 1 GPIO_ACTIVE_HIGH >;
   };
 
-<<<<<<< HEAD
-=======
-  kscan1: kscan {
+  kscan1: kscan_direct {
 		compatible = "zmk,kscan-gpio-direct";
 
 		label = "SW";
@@ -30,7 +30,6 @@
 			= <&gpio0 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>
 			;
 	};
->>>>>>> parent of ba98225 (-)
 
   dilbert_encoder: dilbert_encoder {
         compatible = "alps,ec11";
@@ -52,4 +51,4 @@
 };
 
 
-  
+ 

@@ -5,17 +5,15 @@
 
 #define DEFAULT 0
 #define BLE 1
+
 #define NONE 0
 
-
-
 / {
-
   keymap {
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-        &tog BLE        &mt z A         &none 
+        &tog BLE        &kp B           &kp P 
         &kp A           &kp V           &kp K    
         &kp Y           &kp H           &kp L
      >;
@@ -28,7 +26,11 @@
       >;
     };
 
+
+
     sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
+
+
   };
 };
