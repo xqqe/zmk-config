@@ -9,11 +9,26 @@
 #define NONE 0
 
 / {
+    macros {
+        zed_em_kay: zed_em_kay {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
+};
+
+/ {
   keymap {
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-        &tog BLE        &kp B           &kp P 
+        &tog BLE        &mt z A         &kp P 
         &kp A           &kp V           &kp K    
         &kp Y           &kp H           &kp L
      >;
@@ -26,13 +41,6 @@
       >;
     };
 
-  direct {
-    compatible = "zmk,kscan-gpio-direct";
-    default_layer {
-      bindings = <&kp L>;
-    };
-  };
-  
     sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
 
