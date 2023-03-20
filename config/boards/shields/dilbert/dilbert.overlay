@@ -44,7 +44,7 @@
 		label = "SW";
 
 		input-gpios
-			= <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			= <&xiao_d 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>
 			;
 	};
 
