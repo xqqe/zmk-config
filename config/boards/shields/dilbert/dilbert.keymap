@@ -28,7 +28,7 @@
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-        &to 1           &macro_name     &kp B 
+        &to BLE           &macro_name     &kp B 
         &kp C           &kp D           &kp E    
         &kp F           &kp G           &kp H  
         &kp R      
@@ -36,7 +36,7 @@
 
     ble_layer {
       bindings = <
-        &to 0           &kp KP_DIVIDE   &kp KP_MULTIPLY 
+        &to DEFAULT           &kp KP_DIVIDE   &kp KP_MULTIPLY 
         &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9    
         &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6  
         &kp L               
