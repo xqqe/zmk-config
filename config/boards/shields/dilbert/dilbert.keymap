@@ -28,8 +28,8 @@
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-        &to 1           &macro_name     &kp B 
-        &kp C           &kp D           &kp E    
+        &to 1           &macro_name     &bt BT_NXT 
+        &kp C           &kp D           &bt BT_SEL    
         &kp F           &kp G           &kp H  
         &kp R      
      >;
