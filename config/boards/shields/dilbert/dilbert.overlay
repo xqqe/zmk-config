@@ -38,24 +38,5 @@
   status = "okay";
 };
 
-&xiao_spi {
-  status = "okay";
-
-  cs-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>, <&xiao_d 6 GPIO_ACTIVE_HIGH>;
-  shift_reg: 595@0 {
-    compatible = "zmk,gpio-595";
-    status = "okay";
-    gpio-controller;
-    spi-max-frequency = <200000>;
-    #gpio-cells = <2>;
-    reg = <0>;
-    label = "4HC595";
-    ngpios = <16>;
-  };
-};
-
-&xiao_serial { 
-  status = "disabled"; 
-};
 
   
