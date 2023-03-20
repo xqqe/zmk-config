@@ -13,7 +13,7 @@
 
     macros {
       ctrA: ctrA {
-        label = "my_macro";
+        label = "ctrA";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings =  <&macro_press &kp LCTRL>,
@@ -30,7 +30,7 @@
         &to 1           &ctrA           &bt BT_NXT 
         &kp C           &kp D           &bt BT_SEL 0   
         &kp F           &kp G           &bt BT_SEL 1 
-        &kp K_MUTE      
+        &kp C_MUTE      
      >;
      sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
@@ -42,7 +42,7 @@
         &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6  
         &kp C_MUTE               
       >;
-      sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+      sensor-bindings = <&inc_dec_kp C_SCROLL_UP C_SCROLL_DOWN>;
     };
 
 
