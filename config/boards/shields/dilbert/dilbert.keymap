@@ -43,6 +43,33 @@
                     <&macro_tap &kp A>,
                     <&macro_release &kp LCTRL>;
       };
+
+      ctrA: ctrC {
+        label = "ctrA";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings =  <&macro_press &kp LCTRL>,
+                    <&macro_tap &kp A>,
+                    <&macro_release &kp LCTRL>;
+      };
+
+      ctrA: ctrA {
+        label = "ctrA";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings =  <&macro_press &kp LCTRL>,
+                    <&macro_tap &kp A>,
+                    <&macro_release &kp LCTRL>;
+      };
+
+      ctrA: ctrA {
+        label = "ctrA";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings =  <&macro_press &kp LCTRL>,
+                    <&macro_tap &kp A>,
+                    <&macro_release &kp LCTRL>;
+      };
     };
 
   keymap {
@@ -50,8 +77,8 @@
 
     default_layer {
       bindings = <
-        &to 1           &ctrA             &bt BT_NXT 
-        &kp C           &mwh SCROLL_UP    &bt BT_SEL 0   
+        &to 1           &ctrA             &ht_hp LCTRL A 
+        &kp C           &mwh SCROLL_UP    &mt LSHIFT A  
         &kp C           &mwh SCROLL_DOWN  &bt BT_SEL 1 
         &kp C_MUTE      
      >;
@@ -60,9 +87,9 @@
 
     ble_layer {
       bindings = <
-        &to 0           &kp KP_DIVIDE   &kp KP_MULTIPLY 
-        &kp K_CALCULATOR    &kp NUMBER_8    &kp NUMBER_9    
-        &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6  
+        &to 0               &kp KP_DIVIDE   &bt BT_NXT 
+        &kp K_CALCULATOR    &kp NUMBER_8    &bt BT_SEL 0    
+        &kp NUMBER_4        &kp NUMBER_5    &bt BT_SEL 1  
         &kp C_MUTE               
       >;
       sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
