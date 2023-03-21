@@ -116,7 +116,11 @@
       label = "test_m";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings = <&kp Z &kp M &kp K &kp EXCLAMATION>;
+      bindings = <&macro_tap_time 10>
+    , <&kp S &kp H &kp O &kp R &kp T>
+    , <&macro_tap_time 500>
+    , <&kp L &kp O &kp N &kp G>
+    ;
     };
 
     find_error: find_error {
@@ -127,7 +131,7 @@
                   <&macro_tap &kp F>,
                   <&macro_release &kp LCTRL>,
                   <&macro_wait_time 500>,
-                  <&kp E &kp R &kp R &kp O &kp R>;
+                  <&macro_tap &kp E &kp R &kp R &kp O &kp R>;
 
     };
   };
