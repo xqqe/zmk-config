@@ -9,7 +9,6 @@
 #define NONE 0
 
 #define U_MOUSE_MOVE_MAX 1400                     /* <--- New max speed setting (default: 600) */
-
 #define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
 #define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
 #define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
@@ -20,8 +19,6 @@
 };
 
 #define U_MOUSE_SCROLL_MAX 100                    /* <--- New max speed setting (default: 10) */
-
-
 #define SCROLL_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
 #define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
 #define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
@@ -119,12 +116,7 @@
       label = "test_m";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings
-          = <&to 1>
-          , <&bl BL_ON>
-          , <&kp Z &kp M &kp K &kp EXCLAMATION>
-          ;
-
+      bindings = <&kp Z &kp M &kp K &kp EXCLAMATION>;
     };
 
     find_error: find_error {
