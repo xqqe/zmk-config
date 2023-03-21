@@ -33,53 +33,97 @@
 
 / {
 
+  behaviors {
+        pht: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1>;    // <---[[the W key]]
+        };
 
-    macros {
-      ctrA: ctrA {
-        label = "ctrA";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings =  <&macro_press &kp LCTRL>,
-                    <&macro_tap &kp A>,
-                    <&macro_release &kp LCTRL>;
-      };
+        lh_pht: left_hand_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <5 6 7 8 9 10>;    // <---[[right-hand keys]]
+        };
 
-      ctrA: ctrC {
-        label = "ctrA";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings =  <&macro_press &kp LCTRL>,
-                    <&macro_tap &kp A>,
-                    <&macro_release &kp LCTRL>;
-      };
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
 
-      ctrA: ctrA {
-        label = "ctrA";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings =  <&macro_press &kp LCTRL>,
-                    <&macro_tap &kp A>,
-                    <&macro_release &kp LCTRL>;
-      };
-
-      ctrA: ctrA {
-        label = "ctrA";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings =  <&macro_press &kp LCTRL>,
-                    <&macro_tap &kp A>,
-                    <&macro_release &kp LCTRL>;
-      };
+        bhm: balanced_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
     };
+
+
+  macros {
+    ctrA: ctrA {
+      label = "ctrA";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings =  <&macro_press &kp LCTRL>,
+                  <&macro_tap &kp A>,
+                  <&macro_release &kp LCTRL>;
+    };
+
+    ctrA: ctrC {
+      label = "ctrA";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings =  <&macro_press &kp LCTRL>,
+                  <&macro_tap &kp A>,
+                  <&macro_release &kp LCTRL>;
+    };
+
+    ctrA: ctrA {
+      label = "ctrA";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings =  <&macro_press &kp LCTRL>,
+                  <&macro_tap &kp A>,
+                  <&macro_release &kp LCTRL>;
+    };
+
+    ctrA: ctrA {
+      label = "ctrA";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings =  <&macro_press &kp LCTRL>,
+                  <&macro_tap &kp A>,
+                  <&macro_release &kp LCTRL>;
+    };
+  };
 
   keymap {
     compatible = "zmk,keymap";
 
     default_layer {
       bindings = <
-        &to 1           &ctrA             &hm LCTRL A 
-        &kp C           &mwh SCROLL_UP    &mt LSHIFT A  
-        &kp C           &mwh SCROLL_DOWN  &bt BT_SEL 1 
+        &to 1           &ctrA             &pht LCTRL A 
+        &bhm LSHIFT C           &mwh SCROLL_UP    &lh_pht LSHIFT A  
+        &mt LSHIFT C           &mwh SCROLL_DOWN  &hm BT_SEL 1 
         &kp C_MUTE      
      >;
      sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
