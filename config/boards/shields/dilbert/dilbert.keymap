@@ -77,7 +77,7 @@
 
     default_layer {
       bindings = <
-        &to 1           &ctrA             &ht_hp LCTRL A 
+        &to 1           &ctrA             &hm LCTRL A 
         &kp C           &mwh SCROLL_UP    &mt LSHIFT A  
         &kp C           &mwh SCROLL_DOWN  &bt BT_SEL 1 
         &kp C_MUTE      
