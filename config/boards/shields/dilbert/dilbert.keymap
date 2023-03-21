@@ -115,6 +115,18 @@
                   <&macro_release &kp LCTRL>;
     };
 
+    test_m: test_m {
+      label = "test_m";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings
+          = <&to 1>
+          , <&bl BL_ON>
+          , <&kp Z &kp M &kp K &kp EXCLAMATION>
+          ;
+
+    };
+
     find_error: find_error {
       label = "find_error";
       compatible = "zmk,behavior-macro";
@@ -134,7 +146,7 @@
       bindings = <
         &to 1            &kp DEL                  &pht LCTRL A 
         &bhm LSHIFT C    &find_error         &lh_pht LSHIFT A  
-        &mt LSHIFT C     &ctrA       &hm LSHIFT A 
+        &mt LSHIFT C     &test_m       &hm LSHIFT A 
         &kp C_MUTE      
      >;
      sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
