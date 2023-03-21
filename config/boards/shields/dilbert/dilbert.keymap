@@ -88,7 +88,7 @@
                   <&macro_release &kp LCTRL>;
     };
 
-    ctrA: ctrC {
+    ctrC: ctrC {
       label = "ctrC";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
@@ -97,7 +97,7 @@
                   <&macro_release &kp LCTRL>;
     };
 
-    ctrA: ctrV {
+    ctrV: ctrV {
       label = "ctrV";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
@@ -106,7 +106,7 @@
                   <&macro_release &kp LCTRL>;
     };
 
-    ctrA: ctrZ {
+    ctrZ: ctrZ {
       label = "ctrZ";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
