@@ -89,29 +89,29 @@
     };
 
     ctrA: ctrC {
-      label = "ctrA";
+      label = "ctrC";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings =  <&macro_press &kp LCTRL>,
-                  <&macro_tap &kp A>,
+                  <&macro_tap &kp C>,
                   <&macro_release &kp LCTRL>;
     };
 
-    ctrA: ctrA {
-      label = "ctrA";
+    ctrA: ctrV {
+      label = "ctrV";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings =  <&macro_press &kp LCTRL>,
-                  <&macro_tap &kp A>,
+                  <&macro_tap &kp V>,
                   <&macro_release &kp LCTRL>;
     };
 
-    ctrA: ctrA {
-      label = "ctrA";
+    ctrA: ctrZ {
+      label = "ctrZ";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings =  <&macro_press &kp LCTRL>,
-                  <&macro_tap &kp A>,
+                  <&macro_tap &kp Z>,
                   <&macro_release &kp LCTRL>;
     };
   };
