@@ -126,6 +126,7 @@
       bindings =  <&macro_press &kp LCTRL>,
                   <&macro_tap &kp F>,
                   <&macro_release &kp LCTRL>,
+                  <&macro_wait_time 500>,
                   <&kp E &kp R &kp R &kp O &kp R>;
 
     };
