@@ -78,43 +78,58 @@
     };
 
 
-  macros {
-    ctrA: ctrA {
-      label = "ctrA";
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings =  <&macro_press &kp LCTRL>,
-                  <&macro_tap &kp A>,
-                  <&macro_release &kp LCTRL>;
-    };
+  // macros {
+  //   ctrA: ctrA {
+  //     label = "ctrA";
+  //     compatible = "zmk,behavior-macro";
+  //     #binding-cells = <0>;
+  //     bindings =  <&macro_press &kp LCTRL>,
+  //                 <&macro_tap &kp A>,
+  //                 <&macro_release &kp LCTRL>;
+  //   };
 
-    ctrC: ctrC {
-      label = "ctrC";
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings =  <&macro_press &kp LCTRL>,
-                  <&macro_tap &kp C>,
-                  <&macro_release &kp LCTRL>;
-    };
+  //   ctrC: ctrC {
+  //     label = "ctrC";
+  //     compatible = "zmk,behavior-macro";
+  //     #binding-cells = <0>;
+  //     bindings =  <&macro_press &kp LCTRL>,
+  //                 <&macro_tap &kp C>,
+  //                 <&macro_release &kp LCTRL>;
+  //   };
 
-    ctrV: ctrV {
-      label = "ctrV";
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings =  <&macro_press &kp LCTRL>,
-                  <&macro_tap &kp V>,
-                  <&macro_release &kp LCTRL>;
-    };
+  //   ctrV: ctrV {
+  //     label = "ctrV";
+  //     compatible = "zmk,behavior-macro";
+  //     #binding-cells = <0>;
+  //     bindings =  <&macro_press &kp LCTRL>,
+  //                 <&macro_tap &kp V>,
+  //                 <&macro_release &kp LCTRL>;
+  //   };
 
-    ctrZ: ctrZ {
-      label = "ctrZ";
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings =  <&macro_press &kp LCTRL>,
-                  <&macro_tap &kp Z>,
-                  <&macro_release &kp LCTRL>;
-    };
-  };
+  //   ctrZ: ctrZ {
+  //     label = "ctrZ";
+  //     compatible = "zmk,behavior-macro";
+  //     #binding-cells = <0>;
+  //     bindings =  <&macro_press &kp LCTRL>,
+  //                 <&macro_tap &kp Z>,
+  //                 <&macro_release &kp LCTRL>;
+  //   };
+
+  //   find_error: find_error {
+  //     label = "find_error";
+  //     compatible = "zmk,behavior-macro";
+  //     #binding-cells = <0>;
+  //     bindings =  <&macro_press &kp LCTRL>,
+  //                 <&macro_tap &kp F>,
+  //                 <&macro_release &kp LCTRL>,
+  //                 <&macro_tap &kp E>,
+  //                 <&macro_tap &kp R>,
+  //                 <&macro_tap &kp R>,
+  //                 <&macro_tap &kp O>,
+  //                 <&macro_tap &kp R>;
+
+  //   };
+  // };
 
   keymap {
     compatible = "zmk,keymap";
