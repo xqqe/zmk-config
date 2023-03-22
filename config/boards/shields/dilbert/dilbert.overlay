@@ -22,7 +22,7 @@
             kscan = <&kscan2>;
             row-offset = <3>; // ...and shift it to not overlap
         };
-  };
+    };
 
   kscan1: kscan_matrix {
     compatible = "zmk,kscan-gpio-matrix";
@@ -40,8 +40,12 @@
 
   kscan2: kscan_direct {
 		compatible = "zmk,kscan-gpio-direct";
+
 		label = "SW";
-		input-gpios = <&xiao_d 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+
+		input-gpios
+			= <&xiao_d 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>
+			;
 	};
 
   default_transform: matrix_transform {
@@ -64,7 +68,7 @@
             RC(2,0) RC(2,1) RC(2,2)
             RC(3,0)             
         >;
-  };
+    };
 
   dilbert_encoder: dilbert_encoder {
         compatible = "alps,ec11";
@@ -79,10 +83,11 @@
       compatible = "zmk,keymap-sensors";
       sensors = <&dilbert_encoder>;
   };
-
-  &dilbert_encoder {
-    status = "okay";
-  };
-
 };
+
+&dilbert_encoder {
+  status = "okay";
+};
+
+
  
