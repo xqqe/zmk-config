@@ -141,22 +141,22 @@
 
     default_layer {
       bindings = <
-        &to 1            &kp DEL                  &kp NUMBER_4 
-        &kp NUMBER_4    &find_error         &kp NUMBER_4  
-        &kp NUMBER_4     &test_m       &kp NUMBER_4 
-        &kp HOME      
+        &to 1            &kp DEL                  &pht LCTRL A 
+        &bhm LSHIFT C    &find_error         &lh_pht LSHIFT A  
+        &mt LSHIFT C     &test_m       &hm LSHIFT A 
+        &kp C_MUTE      
      >;
-     sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+     sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
     };
 
     ble_layer {
       bindings = <
         &to 0               &kp KP_DIVIDE   &bt BT_NXT 
-        &kp NUMBER_4    &mwh SCROLL_UP    &bt BT_SEL 0    
+        &kp K_CALCULATOR    &mwh SCROLL_UP    &bt BT_SEL 0    
         &kp NUMBER_4        &mwh SCROLL_DOWN    &bt BT_SEL 1  
         &kp C_MUTE               
       >;
-      sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+      sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
     };
 
 
