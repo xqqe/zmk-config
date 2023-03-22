@@ -72,8 +72,7 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-    };
-
+  };
 
   macros {
     ctrA: ctrA {
@@ -85,42 +84,49 @@
                   <&macro_release &kp LCTRL>;
     };
 
-    ctrC: ctrC {
-      label = "ctrC";
+    ctrX: ctrX {
+      label = "ctrX";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings =  <&macro_press &kp LCTRL>,
-                  <&macro_tap &kp C>,
+                  <&macro_tap &kp X>,
                   <&macro_release &kp LCTRL>;
     };
 
-    ctrV: ctrV {
-      label = "ctrV";
+    ctrS: ctrS {
+      label = "ctrS";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings =  <&macro_press &kp LCTRL>,
-                  <&macro_tap &kp V>,
+                  <&macro_tap &kp S>,
                   <&macro_release &kp LCTRL>;
     };
 
-    ctrZ: ctrZ {
-      label = "ctrZ";
+    ctrSS: ctrSS {
+      label = "ctrSS";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings =  <&macro_press &kp LCTRL &kp LEFT_SHIFT>,
+                  <&macro_tap &kp S>,
+                  <&macro_release &kp LCTRL &kp LEFT_SHIFT>;
+    };
+
+    ctrT: ctrT {
+      label = "ctrT";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings =  <&macro_press &kp LCTRL>,
-                  <&macro_tap &kp Z>,
+                  <&macro_tap &kp T>,
                   <&macro_release &kp LCTRL>;
     };
 
-    test_m: test_m {
-      label = "test_m";
+    ctrST: ctrST {
+      label = "ctrST";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings = <&macro_tap_time 10>
-    , <&kp S &kp H &kp O &kp R &kp T>
-    , <&macro_tap_time 500>
-    , <&kp L &kp O &kp N &kp G>
-    ;
+      bindings =  <&macro_press &kp LCTRL &kp LEFT_SHIFT>,
+                  <&macro_tap &kp T>,
+                  <&macro_release &kp LCTRL &kp LEFT_SHIFT>;
     };
 
     find_error: find_error {
@@ -141,9 +147,9 @@
 
     default_layer {
       bindings = <
-        &to 1            &kp DEL                  &pht LCTRL A 
-        &bhm LSHIFT C    &find_error         &lh_pht LSHIFT A  
-        &mt LSHIFT C     &test_m       &hm LSHIFT A 
+        &to 1            &kp DEL             &ctrX
+        &ctrS            &ctrSS              &find_error  
+        &ctrT            &ctrST              &kp W 
         &kp C_MUTE      
      >;
      sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
