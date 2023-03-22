@@ -29,13 +29,13 @@
     label = "KSCAN";
     diode-direction = "col2row";
     row-gpios =
-      <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-      <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-      <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+      <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+      <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+      <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     col-gpios =
-      <&xiao_d 3 GPIO_ACTIVE_HIGH >,
+      <&xiao_d 0 GPIO_ACTIVE_HIGH >,
       <&xiao_d 2 GPIO_ACTIVE_HIGH >,
-      <&xiao_d 1 GPIO_ACTIVE_HIGH >;
+      <&xiao_d 4 GPIO_ACTIVE_HIGH >;
   };
 
   kscan2: kscan_direct {
@@ -72,7 +72,6 @@
 
   dilbert_encoder: dilbert_encoder {
         compatible = "alps,ec11";
-        status = "okay";
         label = "DILBERT Endoder";
         a-gpios = <&xiao_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&xiao_d 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
@@ -86,6 +85,11 @@
 };
 
 
+};
+
+&dilbert_encoder {
+  status = "okay";
+};
 
 
  
