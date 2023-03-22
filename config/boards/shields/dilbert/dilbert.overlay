@@ -106,6 +106,7 @@
       multiplex-ratio = <0x1f>;
       com-sequential;
       prechargep = <0x22>;
+    };
   };
 
 };
